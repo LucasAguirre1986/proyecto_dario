@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Responsive con Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .sliderContainer {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            font-size: 16px;
+            max-width: 100%;
+            background: linear-gradient(-135deg, #008ed9, #8b00db);
+            font-family: 'proxima nova', 'open sans', 'Helvetica', sans-serif;
+        }
+
+        .Marquee {
+
+            /* width: 85vw; */
+            box-sizing: border-box;
+            padding: 1em;
+            color: white;
+            font-weight: 200;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .Marquee-content {
+            display: flex;
+            animation: marquee 25s linear infinite running;
+        }
+
+        .Marquee-content:hover {
+            animation-play-state: paused;
+        }
+
+        .Marquee-tag {
+            width: 200px;
+            /*             
+            margin: 0 .5em;
+            padding: .5em;
+            background: rgba(255, 255, 255, .1); */
+            display: inline-flex;
+            padding: .5em;
+            align-items: center;
+            justify-content: center;
+            transition: all .2s ease;
+        }
+
+        .Marquee-tag img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .Marquee-tag:hover {
+            background: rgba(255, 255, 255, .5);
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translate(-50%);
+            }
+        }
+
+        .img-1 {
+            position: relative;
+            top: 26vh;
+            z-index: 8;
+            left: 0%;
+        }
+
+        .img-2 {
+            position: relative;
+            top: -25vh;
+            z-index: 8;
+            left: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sliderContainer">
+        <div class="Marquee">
+            <div class="Marquee-content">
+                <div class="Marquee-tag img-1"><img
+                        src="https://i.pinimg.com/474x/f7/48/d0/f748d05e19e3cc5101b9ab7cc3f48f51.jpg" alt=""></div>
+
+                <div class="Marquee-tag"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL7pdHohEZQ4AQRVDz2jwiojTyhwJ6P4YbGNcpzkfE5g&s"
+                        alt=""></div>
+
+                <div class="Marquee-tag img-2"><img
+                        src="https://static.printler.com/cache/4/2/0/1/d/f/4201df529e2f753e8256eeffea48f79c45a44b7e.jpg"
+                        alt=""></div>
+
+                <div class="Marquee-tag"><img
+                        src="https://img.freepik.com/fotos-premium/impresionante-amanecer-tine-cielo-calidas_972324-6286.jpg"
+                        alt=""></div>
+
+                <div class="Marquee-tag img-1"><img
+                        src="https://i.pinimg.com/474x/f7/48/d0/f748d05e19e3cc5101b9ab7cc3f48f51.jpg" alt=""></div>
+
+                <div class="Marquee-tag"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL7pdHohEZQ4AQRVDz2jwiojTyhwJ6P4YbGNcpzkfE5g&s"
+                        alt=""></div>
+
+                <div class="Marquee-tag img-2"><img
+                        src="https://static.printler.com/cache/4/2/0/1/d/f/4201df529e2f753e8256eeffea48f79c45a44b7e.jpg"
+                        alt=""></div>
+
+                <div class="Marquee-tag"><img
+                        src="https://img.freepik.com/fotos-premium/impresionante-amanecer-tine-cielo-calidas_972324-6286.jpg"
+                        alt=""></div>
+
+                <div class="Marquee-tag img-1"><img
+                        src="https://i.pinimg.com/474x/f7/48/d0/f748d05e19e3cc5101b9ab7cc3f48f51.jpg" alt=""></div>
+
+                <div class="Marquee-tag"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL7pdHohEZQ4AQRVDz2jwiojTyhwJ6P4YbGNcpzkfE5g&s"
+                        alt=""></div>
+
+                <div class="Marquee-tag img-2"><img
+                        src="https://static.printler.com/cache/4/2/0/1/d/f/4201df529e2f753e8256eeffea48f79c45a44b7e.jpg"
+                        alt=""></div>
+
+                <div class="Marquee-tag"><img
+                        src="https://img.freepik.com/fotos-premium/impresionante-amanecer-tine-cielo-calidas_972324-6286.jpg"
+                        alt=""></div>
+                <div class="Marquee-tag img-1"><img
+                        src="https://i.pinimg.com/474x/f7/48/d0/f748d05e19e3cc5101b9ab7cc3f48f51.jpg" alt=""></div>
+
+                <div class="Marquee-tag"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL7pdHohEZQ4AQRVDz2jwiojTyhwJ6P4YbGNcpzkfE5g&s"
+                        alt=""></div>
+
+                <div class="Marquee-tag img-2"><img
+                        src="https://static.printler.com/cache/4/2/0/1/d/f/4201df529e2f753e8256eeffea48f79c45a44b7e.jpg"
+                        alt=""></div>
+
+                <div class="Marquee-tag"><img
+                        src="https://img.freepik.com/fotos-premium/impresionante-amanecer-tine-cielo-calidas_972324-6286.jpg"
+                        alt=""></div>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+
+        <section class="jumbotron">
+            <div class="container text-center">
+                <h1>Bienvenido a nuestra página web</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Sección 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
+                dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+        </section>
+
+        <section>
+            <h2>Sección 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
+                dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>Derechos de autor © 2024. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const slideTrack = document.getElementById('slideTrack');
+            const slideWidth = slideTrack.querySelector('.slide').offsetWidth;
+            const windowWidth = window.innerWidth;
+            const numImages = Math.ceil(windowWidth / slideWidth) + 1; // Aseguramos que siempre haya un slide adicional para que no se vea el salto
+
+            for (let i = 0; i < numImages; i++) {
+                const slideClone = slideTrack.querySelector('.slide').cloneNode(true);
+                slideTrack.appendChild(slideClone);
+            }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
