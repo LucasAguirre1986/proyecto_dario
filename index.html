@@ -6,199 +6,291 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Responsive con Bootstrap</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .sliderContainer {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: white;
-            font-size: 16px;
-            max-width: 100%;
-            background: linear-gradient(-135deg, #008ed9, #8b00db);
-            font-family: 'proxima nova', 'open sans', 'Helvetica', sans-serif;
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animate.css" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet"> -->
 
-        .Marquee {
+    <link href="https://fonts.cdnfonts.com/css/gt-alpina-trial" rel="stylesheet">
 
-            /* width: 85vw; */
-            box-sizing: border-box;
-            padding: 1em;
-            color: white;
-            font-weight: 200;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            height: 100%;
-        }
 
-        .Marquee-content {
-            display: flex;
-            animation: marquee 25s linear infinite running;
-        }
-
-        .Marquee-content:hover {
-            animation-play-state: paused;
-        }
-
-        .Marquee-tag {
-            width: 200px;
-            /*             
-            margin: 0 .5em;
-            padding: .5em;
-            background: rgba(255, 255, 255, .1); */
-            display: inline-flex;
-            padding: .5em;
-            align-items: center;
-            justify-content: center;
-            transition: all .2s ease;
-        }
-
-        .Marquee-tag img {
-            width: 100%;
-            object-fit: contain;
-        }
-
-        .Marquee-tag:hover {
-            background: rgba(255, 255, 255, .5);
-            transform: scale(1.1);
-            cursor: pointer;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translate(-50%);
-            }
-        }
-
-        .img-1 {
-            position: relative;
-            top: 26vh;
-            z-index: 8;
-            left: 0%;
-        }
-
-        .img-2 {
-            position: relative;
-            top: -25vh;
-            z-index: 8;
-            left: 0%;
-        }
-    </style>
 </head>
 
 <body>
-    <header class="sliderContainer">
+    <div>
+        <div id="particles-js"></div>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    </div>
+
+    <!-- <div class="landing_image">
+        <img src="assets/img/1706613784-c.avif" alt="">
+        <img src="assets/img/1704633114-home-splash-2-landscape.avif" alt="">
+        <img src="assets/img/1706613676-b.avif" alt="">
+    </div> -->
+
+    <div class="landing_image animate__animated animate__fadeOut animate__slow animate__delay-1s"
+        id="landing_principal">
+        <img class="animate__animated animate__fadeIn" src="assets/img/1706613784-c.avif" alt="">
+    </div>
+
+    <section class="Marquee-title wow fadeInLeft">
+        <div class="text-gradient">DARIO</div>
+        <div class="text-gradient">CALEQUI</div>
+    </section>
+
+    <section class="Marquee-title animate__animated animate__fadeIn" style="z-index: 9999999;" id="openTitle">
+        <div class="text-gradient">DARIO</div>
+        <div class="text-gradient">CALEQUI</div>
+    </section>
+
+    <header class="sliderContainer ">
         <div class="Marquee">
             <div class="Marquee-content">
-                <div class="Marquee-tag img-1"><img
-                        src="https://i.pinimg.com/474x/f7/48/d0/f748d05e19e3cc5101b9ab7cc3f48f51.jpg" alt=""></div>
-
-                <div class="Marquee-tag"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL7pdHohEZQ4AQRVDz2jwiojTyhwJ6P4YbGNcpzkfE5g&s"
-                        alt=""></div>
-
-                <div class="Marquee-tag img-2"><img
-                        src="https://static.printler.com/cache/4/2/0/1/d/f/4201df529e2f753e8256eeffea48f79c45a44b7e.jpg"
-                        alt=""></div>
-
-                <div class="Marquee-tag"><img
-                        src="https://img.freepik.com/fotos-premium/impresionante-amanecer-tine-cielo-calidas_972324-6286.jpg"
-                        alt=""></div>
-
-                <div class="Marquee-tag img-1"><img
-                        src="https://i.pinimg.com/474x/f7/48/d0/f748d05e19e3cc5101b9ab7cc3f48f51.jpg" alt=""></div>
-
-                <div class="Marquee-tag"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL7pdHohEZQ4AQRVDz2jwiojTyhwJ6P4YbGNcpzkfE5g&s"
-                        alt=""></div>
-
-                <div class="Marquee-tag img-2"><img
-                        src="https://static.printler.com/cache/4/2/0/1/d/f/4201df529e2f753e8256eeffea48f79c45a44b7e.jpg"
-                        alt=""></div>
-
-                <div class="Marquee-tag"><img
-                        src="https://img.freepik.com/fotos-premium/impresionante-amanecer-tine-cielo-calidas_972324-6286.jpg"
-                        alt=""></div>
-
-                <div class="Marquee-tag img-1"><img
-                        src="https://i.pinimg.com/474x/f7/48/d0/f748d05e19e3cc5101b9ab7cc3f48f51.jpg" alt=""></div>
-
-                <div class="Marquee-tag"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL7pdHohEZQ4AQRVDz2jwiojTyhwJ6P4YbGNcpzkfE5g&s"
-                        alt=""></div>
-
-                <div class="Marquee-tag img-2"><img
-                        src="https://static.printler.com/cache/4/2/0/1/d/f/4201df529e2f753e8256eeffea48f79c45a44b7e.jpg"
-                        alt=""></div>
-
-                <div class="Marquee-tag"><img
-                        src="https://img.freepik.com/fotos-premium/impresionante-amanecer-tine-cielo-calidas_972324-6286.jpg"
-                        alt=""></div>
-                <div class="Marquee-tag img-1"><img
-                        src="https://i.pinimg.com/474x/f7/48/d0/f748d05e19e3cc5101b9ab7cc3f48f51.jpg" alt=""></div>
-
-                <div class="Marquee-tag"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL7pdHohEZQ4AQRVDz2jwiojTyhwJ6P4YbGNcpzkfE5g&s"
-                        alt=""></div>
-
-                <div class="Marquee-tag img-2"><img
-                        src="https://static.printler.com/cache/4/2/0/1/d/f/4201df529e2f753e8256eeffea48f79c45a44b7e.jpg"
-                        alt=""></div>
-
-                <div class="Marquee-tag"><img
-                        src="https://img.freepik.com/fotos-premium/impresionante-amanecer-tine-cielo-calidas_972324-6286.jpg"
-                        alt=""></div>
+                <div class="Marquee-tag img-1  animate__animated animate__fadeInDown animate__delay-3s"><img
+                        src="assets/img/homepage-5.avif" alt=""></div>
+                <div class="Marquee-tag img-2  animate__animated animate__fadeIn animate__delay-3s"><img
+                        src="assets/img/homepage-7.avif" alt=""></div>
+                <div class="Marquee-tag img-3  animate__animated animate__fadeInUp animate__delay-3s"><img
+                        src="assets/img/homepage-6.avif" alt=""></div>
+                <div class="Marquee-tag img-4  animate__animated animate__fadeInRight animate__delay-3s"><img
+                        src="assets/img/homepage-8.avif" alt=""></div>
+                <div class="Marquee-tag img-1  animate__animated animate__fadeInDown animate__delay-3s"><img
+                        src="assets/img/homepage-5.avif" alt=""></div>
+                <div class="Marquee-tag img-2  animate__animated animate__fadeInUp animate__delay-3s"><img
+                        src="assets/img/homepage-7.avif" alt=""></div>
+                <div class="Marquee-tag img-3  animate__animated animate__fadeInDown animate__delay-3s"><img
+                        src="assets/img/homepage-6.avif" alt=""></div>
+                <div class="Marquee-tag img-4  animate__animated animate__fadeInLeft animate__delay-3s"><img
+                        src="assets/img/homepage-8.avif" alt=""></div>
+                <div class="Marquee-tag img-1  animate__animated animate__fadeInDown animate__delay-3s"><img
+                        src="assets/img/homepage-5.avif" alt=""></div>
+                <div class="Marquee-tag img-2  animate__animated animate__fadeInDown animate__delay-3s"><img
+                        src="assets/img/homepage-7.avif" alt=""></div>
+                <div class="Marquee-tag img-3  animate__animated animate__fadeInDown animate__delay-3s"><img
+                        src="assets/img/homepage-6.avif" alt=""></div>
+                <div class="Marquee-tag img-4  animate__animated animate__fadeInDown animate__delay-3s"><img
+                        src="assets/img/homepage-8.avif" alt=""></div>
+                <div class="Marquee-tag img-1  animate__animated animate__fadeInDown animate__delay-3s"><img
+                        src="assets/img/homepage-5.avif" alt=""></div>
+                <div class="Marquee-tag img-2  animate__animated animate__fadeInDown animate__delay-3s"><img
+                        src="assets/img/homepage-7.avif" alt=""></div>
+                <div class="Marquee-tag img-3  animate__animated animate__fadeInDown animate__delay-3s"><img
+                        src="assets/img/homepage-6.avif" alt=""></div>
+                <div class="Marquee-tag img-4  animate__animated animate__fadeInDown animate__delay-3s"><img
+                        src="assets/img/homepage-8.avif" alt=""></div>
             </div>
         </div>
     </header>
     <main class="container">
 
-        <section class="jumbotron">
-            <div class="container text-center">
-                <h1>Bienvenido a nuestra página web</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+        <section class="section-1 wow fadeInUp">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                ut
+                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+                tation
+                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
         </section>
 
-        <section>
-            <h2>Sección 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-                dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-        </section>
-
-        <section>
-            <h2>Sección 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-                dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+        <section class="section-2 wow fadeInDown">
+            <h1>Studio:</h1>
+            <div>Dario Calequi</div>
+            <div>Studio Manager</div>
+            <div>hi@dariocalequi.com</div>
+            <div>(954) 305 0603</div>
         </section>
     </main>
 
     <footer class="bg-dark text-white text-center py-4">
         <p>Derechos de autor © 2024. Todos los derechos reservados.</p>
     </footer>
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const slideTrack = document.getElementById('slideTrack');
-            const slideWidth = slideTrack.querySelector('.slide').offsetWidth;
-            const windowWidth = window.innerWidth;
-            const numImages = Math.ceil(windowWidth / slideWidth) + 1; // Aseguramos que siempre haya un slide adicional para que no se vea el salto
 
-            for (let i = 0; i < numImages; i++) {
-                const slideClone = slideTrack.querySelector('.slide').cloneNode(true);
-                slideTrack.appendChild(slideClone);
-            }
-        });
-    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            // Al cargar la página, mostramos el fondo naranja
+            // $('.landing_image').addClass('loaded');
+            setTimeout(() => {
+                $('.landing_image').addClass('loaded');
+            }, 600)
+
+            setTimeout(() => {
+                $('#landing_principal').hide();
+            }, 4000)
+
+            // Cuando la imagen está completamente cargada, cambiamos el fondo naranja por la imagen real
+            $('.landing_image img').on('load', function () {
+                setTimeout(() => {
+                    $('.landing_image').addClass('loaded');
+                }, 4600)
+            });
+        });
+
+        // openTitle
+        // Obtener el elemento con el ID "openTitle"
+        const openTitle = document.getElementById('openTitle');
+
+        // Variables para controlar el estado del desplazamiento
+        let lastScrollTop = 0;
+
+        // Función para mostrar u ocultar el elemento dependiendo del desplazamiento
+        function handleScroll() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Desplazamiento hacia abajo
+                openTitle.style.display = 'block';
+            } else {
+                // Desplazamiento hacia arriba
+                openTitle.style.display = 'none';
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Asegura que no se muestre cuando se está en la parte superior
+        }
+
+        // Agregar un listener para el evento de desplazamiento
+        window.addEventListener('scroll', handleScroll);
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 88,
+                    "density": {
+                        "enable": true,
+                        "value_area": 700
+                    }
+                },
+                "color": {
+                    "value": ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"]
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 15
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1.5,
+                        "opacity_min": 0.15,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 2.5,
+                    "random": false,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0.15,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 110,
+                    "color": "#33b1f8",
+                    "opacity": 0.25,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1.6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "bounce",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": false,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+        var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function () {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+
+    </script>
+
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

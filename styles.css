@@ -1,0 +1,379 @@
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.sliderContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #131313;
+    font-size: 16px;
+    max-width: 100%;
+    /* background: linear-gradient(-135deg, #131313, #212325); */
+    /* font-family: 'proxima nova', 'open sans', 'Helvetica', sans-serif; */
+}
+
+.Marquee {
+    box-sizing: border-box;
+    padding: 1em;
+    color: white;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+}
+
+.Marquee-content {
+    display: flex;
+    gap: 19px;
+    animation: marquee 25s linear infinite running;
+}
+
+.Marquee-content:hover {
+    animation-play-state: paused;
+}
+
+.Marquee-tag {
+    width: 200px;
+    display: inline-flex;
+    padding: .5em;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+}
+
+.Marquee-tag img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.Marquee-tag:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.img-1,
+.img-2,
+.img-3,
+.img-4,
+.img-5,
+.img-6 {
+    position: relative;
+}
+
+.img-1 {
+    top: -22vh;
+    left: 1%;
+}
+
+.img-1 img {
+    width: 130%;
+}
+
+.img-2 {
+    top: 200px;
+    left: 2%;
+}
+
+.img-2 img {
+    width: 100%;
+}
+
+.img-3 {
+    top: -25vh;
+    left: 0%;
+}
+
+.img-4 {
+    top: 100px;
+    left: -2%;
+}
+
+.img-4 img {
+    width: 160%;
+}
+
+.img-5 {
+    top: -220px;
+    left: 0%;
+}
+
+.img-5 img {
+    width: 100%;
+}
+
+.img-6 {
+    top: 260px;
+    left: -1%;
+}
+
+.img-6 img {
+    width: 150px;
+}
+
+.Marquee-title {
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    font-size: 15rem;
+    line-height: 15rem;
+    /* font-family: "Platypi", serif; */
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.text-gradient {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, #fa481b, #e03a10);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Media queries para distintos dispositivos */
+@media (max-width: 1200px) {
+    .Marquee-title {
+        font-size: 12rem;
+        line-height: 12rem;
+        z-index: 5;
+        /* Asegura que el texto esté delante en pantallas grandes */
+    }
+
+    .img-1 img,
+    .img-4 img {
+        width: 120%;
+    }
+}
+
+@media (max-width: 992px) {
+    .Marquee-title {
+        font-size: 10rem;
+        line-height: 10rem;
+        z-index: 5;
+        /* Asegura que el texto esté delante en pantallas medianas */
+    }
+
+    .img-1 img,
+    .img-4 img {
+        width: 110%;
+    }
+
+    .img-2,
+    .img-4 {
+        top: 150px;
+    }
+
+    .img-5 {
+        top: -150px;
+    }
+
+    .img-6 {
+        top: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Marquee-title {
+        font-size: 8rem;
+        line-height: 8rem;
+        z-index: 0;
+        /* Asegura que el texto esté detrás en pantallas pequeñas */
+    }
+
+    .img-1 img,
+    .img-4 img {
+        width: 100%;
+    }
+
+    .img-2,
+    .img-4 {
+        top: 100px;
+    }
+
+    .img-5 {
+        top: -100px;
+    }
+
+    .img-6 {
+        top: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .Marquee-title {
+        font-size: 6rem;
+        line-height: 6rem;
+        z-index: 0;
+        /* Asegura que el texto esté detrás en pantallas muy pequeñas */
+    }
+
+    .img-1 img,
+    .img-4 img {
+        width: 90%;
+    }
+
+    .img-2,
+    .img-4 {
+        top: 50px;
+    }
+
+    .img-5 {
+        top: -50px;
+    }
+
+    .img-6 {
+        top: 100px;
+    }
+}
+
+
+.landing_image {
+    background-color: #fa481b;
+    /* Fondo naranja */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.landing_image img {
+    display: none;
+    /* Por defecto, ocultamos la imagen */
+    width: 100%;
+    height: 100vh;
+}
+
+.landing_image.loaded {
+    background-color: transparent;
+    /* Una vez que la imagen está cargada, volvemos el fondo transparente */
+}
+
+.landing_image.loaded img {
+    display: block;
+    /* Mostramos la imagen */
+}
+
+#openTitle {
+    display: none;
+    /* Por defecto, oculto */
+    padding-bottom: 6rem;
+    margin-bottom: -6rem;
+    /* background-color: #131313; */
+    background: linear-gradient(to bottom, transparent, #131313);
+    z-index: 999;
+    /* Asegura que el elemento sea visible sobre otros elementos */
+}
+
+.container,
+body {
+    background-color: #131313;
+    font-family: 'GT Alpina Trial', sans-serif;
+    font-family: 'GT Alpina Fine Trial', sans-serif;
+    font-family: 'GT Alpina Tw Trial', sans-serif;
+
+}
+
+.section-1,
+.section-2 {
+    font-size: 25px;
+    color: #fa481b;
+    font-weight: bold;
+    margin-top: 4rem;
+}
+
+.section-2 {
+    max-width: fit-content; 
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    font-size: 25px;
+    color: #cccccc;
+    font-weight: 700;
+}
+.section-2 h1{
+    font-size: 22px;
+    color: #fa481b;
+}
+
+
+#particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* styles.css */
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation: particleAnimation 1s linear;
+}
+
+@keyframes particleAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+/* .red {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(circle, #ff5f5f 10%, transparent 10%);
+    background-size: 30px 30px;
+    pointer-events: none;
+    animation: moveRed 5s linear infinite;
+}
+
+@keyframes moveRed {
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(calc(-50% + 10px), calc(-50% + 10px));
+    }
+} */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #131313;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
